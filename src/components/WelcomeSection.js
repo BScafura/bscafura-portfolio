@@ -20,7 +20,7 @@ export function WelcomeSection() {
         <div className="info-container">
           <div className="info-container-text-wrapper">
             <div className="avatar-container">
-              <img className="avatar-img" src="/avatar.jpg"></img>
+              <img className="avatar-img" src="./avatar.jpg"></img>
               <div className="avatar-label">
                 <p>Breno Enzo Scafura</p>
                 <p style={{ fontSize: 12, fontStyle: "italic" }}>
