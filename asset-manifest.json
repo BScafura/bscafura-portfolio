@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/bscafura-portfolio/static/css/main.17e8578b.css",
-    "main.js": "/bscafura-portfolio/static/js/main.fab4d2dd.js",
+    "main.js": "/bscafura-portfolio/static/js/main.d5454a56.js",
     "index.html": "/bscafura-portfolio/index.html",
     "main.17e8578b.css.map": "/bscafura-portfolio/static/css/main.17e8578b.css.map",
-    "main.fab4d2dd.js.map": "/bscafura-portfolio/static/js/main.fab4d2dd.js.map"
+    "main.d5454a56.js.map": "/bscafura-portfolio/static/js/main.d5454a56.js.map"
   },
   "entrypoints": [
     "static/css/main.17e8578b.css",
-    "static/js/main.fab4d2dd.js"
+    "static/js/main.d5454a56.js"
   ]
 }
