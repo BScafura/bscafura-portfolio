@@ -1,7 +1,7 @@
 {
   "name": "portfolio-page",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "homepage": "https://bscafura.github.io/bscafura-portfolio/",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
