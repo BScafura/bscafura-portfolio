@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/BScafura/bscafura-portfolio/static/css/main.17e8578b.css",
-    "main.js": "/BScafura/bscafura-portfolio/static/js/main.fab4d2dd.js",
-    "index.html": "/BScafura/bscafura-portfolio/index.html",
-    "main.17e8578b.css.map": "/BScafura/bscafura-portfolio/static/css/main.17e8578b.css.map",
-    "main.fab4d2dd.js.map": "/BScafura/bscafura-portfolio/static/js/main.fab4d2dd.js.map"
+    "main.css": "/bscafura-portfolio/static/css/main.17e8578b.css",
+    "main.js": "/bscafura-portfolio/static/js/main.fab4d2dd.js",
+    "index.html": "/bscafura-portfolio/index.html",
+    "main.17e8578b.css.map": "/bscafura-portfolio/static/css/main.17e8578b.css.map",
+    "main.fab4d2dd.js.map": "/bscafura-portfolio/static/js/main.fab4d2dd.js.map"
   },
   "entrypoints": [
     "static/css/main.17e8578b.css",
