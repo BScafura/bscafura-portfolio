@@ -31,7 +31,7 @@ export function WelcomeSection() {
               <div className="avatar-label">
                 <p>Breno Enzo Scafura</p>
                 <p style={{ textAlign: "center", fontStyle: "italic" }}>
-                  Junior Fullstack Web Developer
+                  Software Developer
                 </p>
                 <div className="main-techs">
                   <i class="devicon-javascript-plain colored"></i>{" "}
@@ -45,7 +45,7 @@ export function WelcomeSection() {
               </div>
             </div>{" "}
             <p>
-              I'm a passionate junior fullstack developer with a strong focus on
+              I'm a passionate software developer with a strong focus on
               frontend and web development, working with technologies like
               JavaScript, TypeScript, Rust, React.js, Next.js, and Node.js. When
               I'm not coding, you'll find me playing the guitar, watching anime,
