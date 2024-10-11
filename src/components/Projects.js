@@ -12,13 +12,10 @@ export function Projects({ data }) {
   return (
     <div>
       <div className="project-title">
-        <h1>Crafting Dynamic Web Experiences 🪛</h1>
-        <p>
-          From Frontend to Backend, Delivering Seamless <br></br> and Scalable
-          Solutions with Modern Technologies 💻🚚
-        </p>
+        <h1>Ongoing 🚧 and Finished 🎉 Projects </h1>
+        <p>From Frontend to Backend, Crafting Dynamic Web Experiences 🪛</p>
       </div>
-      <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         <div className="project-finished-ongoing">
           <h5>On the Move 👨🏻‍💻🏃🏻‍♂️</h5>
         </div>
@@ -47,7 +44,11 @@ export function Projects({ data }) {
             <p>No ongoing projects at the moment.</p>
           )}
         </div>
-        <img className="qrcode-cv" alt="qrcode" src="./qrcode.png"></img>
+        <img
+          className="qrcode-cv"
+          src={process.env.PUBLIC_URL + "/qrcode.png"}
+          alt="qrcode"
+        />
       </div>
     </div>
   );

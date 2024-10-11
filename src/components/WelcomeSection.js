@@ -12,18 +12,23 @@ export function WelcomeSection() {
       <div className="welcome-text">
         <h1>Hello there ✌️😅!</h1>
         <p>
-          I'm Breno Enzo Scafura. I'm a software developer with a passion for
-          creating beautiful and functional web applications 🚀.
+          I'm Breno Enzo Scafura. I'm a software developer <br></br>with a
+          passion for creating beautiful and <br></br> functional web
+          applications 🚀.
         </p>
       </div>
       <div className="welcome-body">
         <div className="info-container">
           <div className="info-container-text-wrapper">
             <div className="avatar-container">
-              <img className="avatar-img" src="./avatar.jpg"></img>
+              <img
+                className="avatar-img"
+                src={process.env.PUBLIC_URL + "/avatar.jpg"}
+                alt="avatar"
+              />{" "}
               <div className="avatar-label">
                 <p>Breno Enzo Scafura</p>
-                <p style={{ fontSize: 12, fontStyle: "italic" }}>
+                <p style={{ textAlign: "center", fontStyle: "italic" }}>
                   Junior Fullstack Web Developer
                 </p>
                 <div className="main-techs">
@@ -33,7 +38,7 @@ export function WelcomeSection() {
                   <i class="devicon-html5-plain-wordmark colored"></i>
                   <i class="devicon-nodejs-plain colored"></i>
                   <i class="devicon-react-original-wordmark colored"></i>
-                  <i class="devicon-nextjs-original-wordmark"></i>
+                  <i class="devicon-nextjs-plain"></i>
                 </div>
               </div>
             </div>{" "}
@@ -77,40 +82,40 @@ export function WelcomeSection() {
                     <p>
                       <i class="devicon-rust-original"></i> Rust
                     </p>
-                    <progress value={"40"} max={"100"}></progress>
-                    <p style={{ fontSize: 11, fontStyle: "italic" }}>
-                      Proficiency level: Begginer
+                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
+                      Proficiency level:
                     </p>
+                    <progress value={"40"} max={"100"}></progress>
                   </div>
                   <div className="tech-card">
                     <p>
                       <i class="devicon-javascript-plain colored"></i>{" "}
                       JavaScript
                     </p>
-                    <progress value={"65"} max={"100"}></progress>
-                    <p style={{ fontSize: 11, fontStyle: "italic" }}>
-                      Proficiency level: Intermidate
+                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
+                      Proficiency level:
                     </p>
+                    <progress value={"65"} max={"100"}></progress>
                   </div>
                   <div className="tech-card">
                     <p>
-                      <i class="devicon-typescript-plain colored"></i>
+                      <i class="devicon-typescript-plain colored"></i>{" "}
                       TypeScript
                     </p>
-                    <progress value={"65"} max={"100"}></progress>
-                    <p style={{ fontSize: 11, fontStyle: "italic" }}>
-                      Proficiency level: Intermidate
+                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
+                      Proficiency level:
                     </p>
+                    <progress value={"65"} max={"100"}></progress>
                   </div>
                   <div className="tech-card">
                     <p>
                       <i class="devicon-dotnetcore-plain colored"></i>{" "}
                       <i class="devicon-csharp-plain colored"></i> C# / .Net
                     </p>
-                    <progress value={"50"} max={"100"}></progress>
-                    <p style={{ fontSize: 11, fontStyle: "italic" }}>
-                      Proficiency level: Intermidate
+                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
+                      Proficiency level:
                     </p>
+                    <progress value={"50"} max={"100"}></progress>
                   </div>
                 </div>
               </div>
@@ -124,30 +129,29 @@ export function WelcomeSection() {
                     <p>
                       <i class="devicon-react-original colored"></i> React.Js
                     </p>
-                    <progress value={"60"} max={"100"}></progress>
-                    <p style={{ fontSize: 11, fontStyle: "italic" }}>
-                      Proficiency level: Intermidate
+                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
+                      Proficiency level:
                     </p>
+                    <progress value={"60"} max={"100"}></progress>
                   </div>
                   <div className="tech-card">
                     <p>
                       <i class="devicon-nodejs-plain-wordmark colored"></i>{" "}
-                      <i class="devicon-npm-original-wordmark colored"></i>{" "}
-                      Node.Js / npm
+                      Node.Js
+                    </p>
+                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
+                      Proficiency level:
                     </p>
                     <progress value={"65"} max={"100"}></progress>
-                    <p style={{ fontSize: 11, fontStyle: "italic" }}>
-                      Proficiency level: Intermidate
-                    </p>
                   </div>
                   <div className="tech-card">
                     <p>
                       <i class="devicon-nextjs-original-wordmark"></i> Next.Js
                     </p>
-                    <progress value={"65"} max={"100"}></progress>
-                    <p style={{ fontSize: 11, fontStyle: "italic" }}>
-                      Proficiency level: Intermidate
+                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
+                      Proficiency level:
                     </p>
+                    <progress value={"65"} max={"100"}></progress>
                   </div>
                 </div>
               </div>
@@ -160,21 +164,20 @@ export function WelcomeSection() {
                     <p>
                       <i class="devicon-mysql-plain-wordmark colored"></i> MySQL
                     </p>
-                    <progress value={"50"} max={"100"}></progress>
-                    <p style={{ fontSize: 11, fontStyle: "italic" }}>
-                      Proficiency level: Intermidate
+                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
+                      Proficiency level:
                     </p>
+                    <progress value={"50"} max={"100"}></progress>
                   </div>
                   <div className="tech-card">
                     <p>
                       <i class="devicon-azuresqldatabase-plain colored"></i>
-                      <i class="devicon-microsoftsqlserver-plain-wordmark colored"></i>{" "}
                       SQL
                     </p>
-                    <progress value={"65"} max={"100"}></progress>
-                    <p style={{ fontSize: 11, fontStyle: "italic" }}>
-                      Proficiency level: Intermidate
+                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
+                      Proficiency level:
                     </p>
+                    <progress value={"65"} max={"100"}></progress>
                   </div>
                 </div>
               </div>

@@ -29,11 +29,7 @@ export function Footer() {
       </div>
       <div className="email-wrapper">
         <p>
-          <FontAwesomeIcon
-            className="header-icon"
-            icon={faEnvelopeOpen}
-            style={{ fontSize: 20 }}
-          />
+          <FontAwesomeIcon className="header-icon" icon={faEnvelopeOpen} />
         </p>
         <a href="">enzoscafura@gmail.com</a>
       </div>

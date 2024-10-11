@@ -1,11 +1,15 @@
-export default function Header({ toggleProjects }) {
+export default function Header({
+  toggleProjects,
+  toggleShowBlog,
+  toggleShowHome,
+}) {
   return (
     <header className="header">
       <p>B</p>
       <div className="navigation-wrapper">
         <div className="navigation-links">
           <li>
-            <a href="/">Home</a>
+            <button onClick={toggleShowHome}>Home</button>
           </li>
           <li>
             <button>About</button>
@@ -15,7 +19,7 @@ export default function Header({ toggleProjects }) {
             <button onClick={toggleProjects}>Portfolio</button>
           </li>
           <li>
-            <button>Blog</button>
+            <button onClick={toggleShowBlog}>Blog</button>
           </li>
         </div>
       </div>

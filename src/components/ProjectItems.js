@@ -28,7 +28,7 @@ export function ProjectItems({ dataproject }) {
                 {dataproject.techs.map((tech, index) => (
                   <p
                     className={tech.toLowerCase()}
-                    style={{ fontSize: 11, marginBottom: 0 }}
+                    style={{ marginBottom: 0 }}
                     key={index}
                   >
                     {tech}
