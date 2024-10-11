@@ -1,4 +1,5 @@
 export function BlogItem({
+  toggleShowBlog,
   id,
   title,
   avatar,
@@ -31,6 +32,13 @@ export function BlogItem({
             <p>{`${author}     •      ${date}`}</p>
           </div>
         </div>
+        <button
+          onClick={toggleShowBlog}
+          style={{ alignSelf: "flex-end" }}
+          className="bn632-hover bn22"
+        >
+          Return
+        </button>
       </div>
     </div>
   );

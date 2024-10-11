@@ -1,8 +1,7 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 export function ProjectItems({ dataproject }) {
   const [showDescription, setShowDescription] = useState(false);
   const [showFeatures, setShowFeatures] = useState(false);
-  const featuresRef = useRef(null);
 
   function handleToggleDescription() {
     setShowDescription((showDescription) => !showDescription);

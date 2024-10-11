@@ -2,6 +2,7 @@ import {
   faGithub,
   faLinkedinIn,
   faTwitter,
+  faOrcid,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelopeOpen } from "@fortawesome/free-regular-svg-icons";
@@ -24,6 +25,9 @@ export function Footer() {
           </a>
           <a href="">
             <FontAwesomeIcon className="header-icon" icon={faTwitter} />
+          </a>
+          <a href="https://orcid.org/0000-0003-0240-6939">
+            <FontAwesomeIcon className="header-icon" icon={faOrcid} />
           </a>
         </div>
       </div>

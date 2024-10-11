@@ -1,6 +1,10 @@
 import { BlogItem } from "./BlogItem";
-import blogposts from "./blogposts";
-export function Blog({ blogposts, selectedPostId, setSelectedPostId }) {
+export function Blog({
+  blogposts,
+  selectedPostId,
+  setSelectedPostId,
+  toggleShowBlog,
+}) {
   // Function to handle post click
   function handlePostClick(id) {
     setSelectedPostId(id); // Set the clicked post's id
@@ -15,12 +19,11 @@ export function Blog({ blogposts, selectedPostId, setSelectedPostId }) {
       {!selectedPostId && (
         <>
           <div className="welcome-text">
-            {" "}
             <h1>Code Chronicles 📒✏️</h1>
             <p>Join me on my adventure through code 🧑🏻‍🚀🏕️</p>
           </div>
           <div className="post-list">
-            {blogposts.map((post, index) => (
+            {blogposts.map((post) => (
               <div
                 className="post-preview"
                 key={post.id}
@@ -44,20 +47,19 @@ export function Blog({ blogposts, selectedPostId, setSelectedPostId }) {
       {/* Show selected post details if a post is selected */}
       {selectedPostId && filteredPost && (
         <div className="post-body">
-          {blogposts.map((post, index) => (
-            <BlogItem
-              key={index}
-              tags={post.tags}
-              id={post.id}
-              title={post.title}
-              subtitle={post.subtitle}
-              avatar={post.avatar}
-              img={post.img}
-              author={post.author}
-              post={post.post}
-              date={post.date}
-            ></BlogItem>
-          ))}
+          <BlogItem
+            toggleShowBlog={toggleShowBlog}
+            key={filteredPost.id}
+            tags={filteredPost.tags}
+            id={filteredPost.id}
+            title={filteredPost.title}
+            subtitle={filteredPost.subtitle}
+            avatar={filteredPost.avatar}
+            img={filteredPost.img}
+            author={filteredPost.author}
+            post={filteredPost.post}
+            date={filteredPost.date}
+          />
         </div>
       )}
     </>

@@ -1,9 +1,11 @@
+import { CProgressBar, CProgress } from "@coreui/bootstrap-react";
 import {
   faGithub,
   faLinkedinIn,
-  faTwitter,
+  faXTwitter,
   faOrcid,
 } from "@fortawesome/free-brands-svg-icons";
+import { faRobot } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function WelcomeSection() {
@@ -63,7 +65,7 @@ export function WelcomeSection() {
                 <FontAwesomeIcon className="header-icon" icon={faLinkedinIn} />
               </a>
               <a href="">
-                <FontAwesomeIcon className="header-icon" icon={faTwitter} />
+                <FontAwesomeIcon className="header-icon" icon={faXTwitter} />
               </a>
               <a href="https://orcid.org/0000-0003-0240-6939">
                 <FontAwesomeIcon className="header-icon" icon={faOrcid} />
@@ -73,116 +75,149 @@ export function WelcomeSection() {
         </div>
         <hr></hr>
         <div className="info-container ">
-          <div className="skills-container">
-            <div className="tools-container">
-              <h4>Tools 🛠️ </h4>
-              <div className="tech-wrapper">
-                <div className="tech-container">
-                  <div className="tech-card">
-                    <p>
-                      <i class="devicon-rust-original"></i> Rust
-                    </p>
-                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
-                      Proficiency level:
-                    </p>
-                    <progress value={"40"} max={"100"}></progress>
-                  </div>
-                  <div className="tech-card">
-                    <p>
-                      <i class="devicon-javascript-plain colored"></i>{" "}
-                      JavaScript
-                    </p>
-                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
-                      Proficiency level:
-                    </p>
-                    <progress value={"65"} max={"100"}></progress>
-                  </div>
-                  <div className="tech-card">
-                    <p>
-                      <i class="devicon-typescript-plain colored"></i>{" "}
-                      TypeScript
-                    </p>
-                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
-                      Proficiency level:
-                    </p>
-                    <progress value={"65"} max={"100"}></progress>
-                  </div>
-                  <div className="tech-card">
-                    <p>
-                      <i class="devicon-dotnetcore-plain colored"></i>{" "}
-                      <i class="devicon-csharp-plain colored"></i> C# / .Net
-                    </p>
-                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
-                      Proficiency level:
-                    </p>
-                    <progress value={"50"} max={"100"}></progress>
-                  </div>
-                </div>
+          <div className="tools-container">
+            <h3 style={{ textAlign: "center" }}>
+              Skills <FontAwesomeIcon className="header-icon" icon={faRobot} />
+            </h3>
+            <div className="tech-wrapper">
+              <div className="tech-container">
+                <p>
+                  <i class="devicon-rust-original"></i> Rust
+                </p>
+                <CProgress className="mb-2">
+                  <CProgressBar
+                    color="success"
+                    variant="striped"
+                    animated
+                    value={45}
+                  >
+                    45%
+                  </CProgressBar>
+                </CProgress>
+              </div>
+              <div className="tech-container">
+                <p>
+                  <i class="devicon-javascript-plain colored"></i> JavaScript
+                </p>
+                <CProgress className="mb-2">
+                  <CProgressBar
+                    color="success"
+                    variant="striped"
+                    animated
+                    value={65}
+                  >
+                    65%
+                  </CProgressBar>
+                </CProgress>
+              </div>
+              <div className="tech-container">
+                <p>
+                  <i class="devicon-typescript-plain colored"></i> TypeScript
+                </p>
+                <CProgress className="mb-3">
+                  <CProgressBar
+                    color="success"
+                    variant="striped"
+                    animated
+                    value={65}
+                  >
+                    65%
+                  </CProgressBar>
+                </CProgress>
+              </div>
+              <div className="tech-container">
+                <p>
+                  <i class="devicon-dotnetcore-plain colored"></i>{" "}
+                  <i class="devicon-csharp-plain colored"></i> C# / .Net
+                </p>
+                <CProgress className="mb-2">
+                  <CProgressBar
+                    color="success"
+                    variant="striped"
+                    animated
+                    value={50}
+                  >
+                    50%
+                  </CProgressBar>
+                </CProgress>
+              </div>
+              <div className="tech-container">
+                <p>
+                  <i class="devicon-react-original colored"></i> React.Js
+                </p>
+                <CProgress className="mb-2">
+                  <CProgressBar
+                    color="success"
+                    variant="striped"
+                    animated
+                    value={60}
+                  >
+                    60%
+                  </CProgressBar>
+                </CProgress>
+              </div>
+              <div className="tech-container">
+                <p>
+                  <i class="devicon-nodejs-plain-wordmark colored"></i> Node.Js
+                </p>
+                <CProgress className="mb-2">
+                  <CProgressBar
+                    color="success"
+                    variant="striped"
+                    animated
+                    value={60}
+                  >
+                    60%
+                  </CProgressBar>
+                </CProgress>
+              </div>
+              <div className="tech-container">
+                <p>
+                  <i class="devicon-nextjs-original-wordmark"></i> Next.Js
+                </p>
+                <CProgress className="mb-2">
+                  <CProgressBar
+                    color="success"
+                    variant="striped"
+                    animated
+                    value={55}
+                  >
+                    55%
+                  </CProgressBar>
+                </CProgress>
+              </div>
+              <div className="tech-container">
+                <p>
+                  <i class="devicon-mysql-plain-wordmark colored"></i> MySQL
+                </p>
+                <CProgress className="mb-2">
+                  <CProgressBar
+                    color="success"
+                    variant="striped"
+                    animated
+                    value={60}
+                  >
+                    60%
+                  </CProgressBar>
+                </CProgress>
+              </div>
+              <div className="tech-container">
+                <p>
+                  <i class="devicon-azuresqldatabase-plain colored"></i>
+                  SQL
+                </p>
+                <CProgress className="mb-2">
+                  <CProgressBar
+                    color="success"
+                    variant="striped"
+                    animated
+                    value={60}
+                  >
+                    60%
+                  </CProgressBar>
+                </CProgress>
               </div>
             </div>
-
-            <div className="frameworks-container">
-              <h4>Frameworks ⚙️ </h4>
-              <div className="tech-wrapper">
-                <div className="tech-container">
-                  <div className="tech-card">
-                    <p>
-                      <i class="devicon-react-original colored"></i> React.Js
-                    </p>
-                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
-                      Proficiency level:
-                    </p>
-                    <progress value={"60"} max={"100"}></progress>
-                  </div>
-                  <div className="tech-card">
-                    <p>
-                      <i class="devicon-nodejs-plain-wordmark colored"></i>{" "}
-                      Node.Js
-                    </p>
-                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
-                      Proficiency level:
-                    </p>
-                    <progress value={"65"} max={"100"}></progress>
-                  </div>
-                  <div className="tech-card">
-                    <p>
-                      <i class="devicon-nextjs-original-wordmark"></i> Next.Js
-                    </p>
-                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
-                      Proficiency level:
-                    </p>
-                    <progress value={"65"} max={"100"}></progress>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="data-container">
-              <h4>Data 🗄️ </h4>
-              <div className="tech-wrapper">
-                <div className="tech-container">
-                  <div className="tech-card">
-                    <p>
-                      <i class="devicon-mysql-plain-wordmark colored"></i> MySQL
-                    </p>
-                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
-                      Proficiency level:
-                    </p>
-                    <progress value={"50"} max={"100"}></progress>
-                  </div>
-                  <div className="tech-card">
-                    <p>
-                      <i class="devicon-azuresqldatabase-plain colored"></i>
-                      SQL
-                    </p>
-                    <p className="proeficiency" style={{ fontStyle: "italic" }}>
-                      Proficiency level:
-                    </p>
-                    <progress value={"65"} max={"100"}></progress>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="tools-data-framework-container"></div>
           </div>
         </div>
       </div>

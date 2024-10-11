@@ -1,5 +1,10 @@
 import { useState } from "react";
 import { ProjectItems } from "./ProjectItems";
+import {
+  faPersonDigging,
+  faBoxesPacking,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 export function Projects({ data }) {
   // Filter projects by status
   const ongoingProjects = data.filter(
@@ -17,7 +22,10 @@ export function Projects({ data }) {
       </div>
       <div style={{ display: "flex", flexDirection: "column" }}>
         <div className="project-finished-ongoing">
-          <h5>On the Move 👨🏻‍💻🏃🏻‍♂️</h5>
+          <h3>
+            On the Move{" "}
+            <FontAwesomeIcon className="header-icon" icon={faPersonDigging} />
+          </h3>
         </div>
         <div className="projects">
           {ongoingProjects.length > 0 ? (
@@ -31,7 +39,10 @@ export function Projects({ data }) {
           )}
         </div>
         <div className="project-finished-ongoing">
-          <h5>Wrapped Up 📦✅</h5>
+          <h3>
+            Wrapped Up{" "}
+            <FontAwesomeIcon className="header-icon" icon={faBoxesPacking} />
+          </h3>
         </div>
         <div className="projects">
           {finishedProjects.length > 0 ? (
