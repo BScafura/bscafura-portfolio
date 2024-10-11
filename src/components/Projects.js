@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { ProjectItems } from "./ProjectItems";
 import {
   faPersonDigging,
