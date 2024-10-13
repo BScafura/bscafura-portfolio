@@ -116,11 +116,15 @@ function App() {
             paginate={paginate}
             filteredPosts={filteredPosts}
           />
-          <Pagination
-            paginate={paginate}
-            filteredPosts={filteredPosts.length}
-            postPerPage={postPerPage}
-          ></Pagination>
+          {selectedPostId === null ? (
+            <Pagination
+              paginate={paginate}
+              filteredPosts={filteredPosts.length}
+              postPerPage={postPerPage}
+            ></Pagination>
+          ) : (
+            <></>
+          )}
         </>
       )}
       {/* Conditionally render About*/}

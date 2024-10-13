@@ -1,14 +1,10 @@
 import { BlogItem } from "./BlogItem";
 import { useEffect } from "react";
-import { Pagination } from "./Pagination";
 export function Blog({
   blogposts,
   selectedPostId,
   setSelectedPostId,
   toggleShowBlog,
-  postPerPage,
-  paginate,
-  filteredPosts,
 }) {
   // Function to handle post click
   function handlePostClick(id) {
