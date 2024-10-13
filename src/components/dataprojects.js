@@ -12,7 +12,7 @@ const dataprojects = [
     ],
     image: "🎞️",
     techs: ["Csharp", "ASPNETCore", "JavaScript", "CSS3", "SQL"],
-    link: "",
+    link: "https://github.com/BScafura/itickets-mvc",
     status: "finished",
   },
   {
@@ -27,7 +27,7 @@ const dataprojects = [
     ],
     image: "📱",
     techs: ["JavaScript", "React", "CSS3"],
-    link: "https://github.com/BScafura/pokedex-subvisual-challenge",
+    link: "https://github.com/BScafura/challenge-pokedex-subvisual",
     status: "finished",
   },
   {
@@ -43,7 +43,7 @@ const dataprojects = [
     ],
     image: "🪙🎟️",
     techs: ["Rust", "TypeScript", "React", "Next", "CSS3"],
-    link: "",
+    link: "https://github.com/BScafura/wba-builders-ticketstock",
     status: "ongoing",
   },
 ];

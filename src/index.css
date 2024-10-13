@@ -1,14 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 
-html,
+html {
+  margin: 0;
+  font-family: "Onest", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  overflow: auto !important;
+  min-height: 100vh;
+  background: #000000; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #061406,
+    #000000
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #262826,
+    #000000
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 body {
   margin: 0;
   font-family: "Onest", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100%;
-  overflow-x: hidden;
-  min-height: 100vh;
   background: #000000; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -24,9 +42,10 @@ body {
 
 .App {
   --un-bg-opacity: 1;
-  min-height: 100vh; /* Ensures the app spans the full height */
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow: hidden !important;
 }
 
 code {
@@ -276,6 +295,53 @@ code {
 .welcome-body {
   display: flex;
   align-items: center;
+}
+
+.about-me {
+  display: flex;
+  align-items: center; /* Horizontally center */
+  justify-content: center; /* Vertically center */
+  flex-direction: column; /* Stack children vertically */
+  margin-top: 20px;
+  color: #e5e7eb;
+  gap: 10px;
+  text-wrap: wrap;
+}
+
+.about-title-wrapper {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Horizontally center */
+  justify-content: center; /* Vertically center */
+  text-wrap: wrap;
+  width: 1024px;
+  margin-top: 50px;
+}
+
+.about-title-wrapper p {
+  font-size: 18px;
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Horizontally center */
+  justify-content: center; /* Vertically center */
+  width: 500px;
+  text-wrap: wrap;
+}
+
+.about-end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 900px;
+  text-wrap: wrap;
+}
+
+.about-title-wrapper p {
+  text-align: center; /* Center paragraph text */
 }
 
 .info-container {
@@ -723,7 +789,7 @@ hr:hover {
   flex-direction: column;
   text-wrap: wrap;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   margin-top: 30px;
 }
 
@@ -888,6 +954,17 @@ hr:hover {
   margin-left: 45%;
 }
 
+.post-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
 /* Responsive styles for tablets */
 @media (max-width: 1024px) {
   .project-title h1 {
@@ -930,6 +1007,12 @@ hr:hover {
   .skills-container p {
     width: 200px;
   }
+
+  .about-title-wrapper h1 {
+    font-size: 35px;
+    width: 700px;
+    text-align: center;
+  }
 }
 
 /* Responsive styles for mobile phones */
@@ -937,6 +1020,10 @@ hr:hover {
   .welcome-text h1 {
     font-size: 2rem; /* Slightly larger heading */
     text-align: center; /* Keep heading centered */
+  }
+
+  .navigation-links li button {
+    font-size: 15px;
   }
 
   .welcome-body {
@@ -1081,9 +1168,45 @@ hr:hover {
   .bn632-hover.bn22 {
     width: 80px;
   }
+
+  .return-wrapper {
+    display: flex;
+    align-self: center;
+  }
+
+  .about-title-wrapper h1 {
+    font-size: 30px;
+    text-align: center;
+    width: 450px;
+  }
+
+  .about-title-wrapper {
+    width: 450px;
+  }
+
+  .about-body {
+    width: 450px;
+    text-align: center;
+    font-size: 13px;
+  }
+  .about-end {
+    width: 450px;
+    text-align: center;
+    font-size: 13px;
+  }
 }
 @media (max-width: 500px) {
   /* Further adjustments for smaller screens */
+
+  .navigation-links li button {
+    font-size: 10px;
+  }
+
+  .return-wrapper .bn632-hover.bn22 {
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+  }
 
   .project-title h1 {
     font-size: 1.5rem;
@@ -1261,6 +1384,29 @@ hr:hover {
   .blog-autor-date-avatar {
     width: 300px;
   }
+
+  .about-title-wrapper h1 {
+    font-size: 30px;
+    text-align: center;
+    width: 400px;
+  }
+
+  .about-title p {
+    font-size: 14px;
+  }
+
+  .about-title-wrapper {
+    width: 400px;
+  }
+
+  .about-body {
+    font-size: 13px;
+    width: 400px;
+  }
+  .about-end {
+    font-size: 13px;
+    width: 400px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1415,6 +1561,7 @@ hr:hover {
 
   .post-header {
     width: 350px;
+    margin-left: 10px;
   }
 
   .post-header h1 {
@@ -1538,5 +1685,25 @@ hr:hover {
     width: 70px;
     height: 30px;
     font-size: 10px;
+  }
+
+  .about-title-wrapper h1 {
+    font-size: 23px;
+    width: 340px;
+  }
+
+  .about-title-wrapper p {
+    font-size: 14px;
+  }
+
+  .about-title-wrapper {
+    width: 340px;
+  }
+
+  .about-body {
+    width: 340px;
+  }
+  .about-end {
+    width: 340px;
   }
 }

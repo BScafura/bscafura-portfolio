@@ -32,6 +32,8 @@ export function BlogItem({
             <p>{`${author}     •      ${date}`}</p>
           </div>
         </div>
+      </div>
+      <div className="return-wrapper">
         <button
           onClick={toggleShowBlog}
           style={{ alignSelf: "flex-end" }}

@@ -54,9 +54,9 @@ export function ProjectItems({ dataproject }) {
             <button onClick={handleToggleFeatures} class="bn31" href="/">
               <span class="bn31span">Features</span>
             </button>
-            <button class="bn31" href="/">
+            <a class="bn31" target="_blank" href={dataproject.link}>
               <span class="bn31span">Visit</span>
-            </button>
+            </a>
           </div>
           {showFeatures === true ? (
             <p>

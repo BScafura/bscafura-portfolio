@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const GoTopButton = ({ scrollToHeader, showGoTop }) => {
   return (
-    <div className={showGoTop === false ? "button-scroll" : "hidden"}>
+    <div className={showGoTop === true ? "button-scroll" : "hidden"}>
       <button
         onClick={scrollToHeader}
         type="button"

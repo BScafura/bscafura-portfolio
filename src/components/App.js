@@ -7,11 +7,18 @@ import dataprojects from "./dataprojects";
 import blogposts from "./blogposts";
 import { useState, useEffect, useRef } from "react";
 import GoTopButton from "./GoTopButton";
+import { AboutMe } from "./AboutMe";
+import { Pagination } from "./Pagination";
 
 function App() {
   const [showProjects, setShowProjects] = useState(false);
   const [showBlog, setShowBlog] = useState(false);
   const [showHome, setShowHome] = useState(false);
+  const [showAbout, setShowAbout] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postPerPage, setPostPerPage] = useState(6);
+  const [filteredPosts, setFilteredPosts] = useState([]);
+
   const [selectedPostId, setSelectedPostId] = useState(null); // State to store the selected post ID
   const [showGoTop, setShowGoTop] = useState(false);
 
@@ -19,10 +26,11 @@ function App() {
   const headerRef = useRef(null);
 
   const handleVisibleButton = () => {
-    // Check if headerRef.current is defined
-    if (headerRef.current) {
-      const { top } = headerRef.current.getBoundingClientRect(); // Get the position of the header
-      setShowGoTop(top < -100); // Show button if the header is scrolled above 100 pixels
+    const threshold = 500; // Adjust threshold value as needed
+    if (window.scrollY > threshold) {
+      setShowGoTop(true); // Show the "Go to Top" button
+    } else {
+      setShowGoTop(false); // Hide the "Go to Top" button
     }
   };
 
@@ -31,11 +39,30 @@ function App() {
     headerRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const paginate = (pageNumber) => setCurrentPage(pageNumber); // Function to handle change page event
+
+  const lastPostIndex = currentPage * postPerPage;
+  const firstPostIndex = lastPostIndex - postPerPage;
+  const currentPost = filteredPosts.slice(firstPostIndex, lastPostIndex);
+
+  useEffect(() => {
+    setFilteredPosts(blogposts); // Set initial filtered posts
+  }, []);
+
+  function toggleAbout() {
+    setShowAbout(true);
+    setShowProjects(false);
+    setShowBlog(false);
+    setShowHome(false);
+    setSelectedPostId(null);
+  }
+
   function toggleProjects() {
     setShowProjects(true);
     setShowBlog(false);
     setShowHome(false);
     setSelectedPostId(null);
+    setShowAbout(false);
   }
 
   function toggleShowBlog() {
@@ -43,6 +70,7 @@ function App() {
     setShowProjects(false);
     setShowHome(false);
     setSelectedPostId(null);
+    setShowAbout(false);
   }
 
   function toggleShowHome() {
@@ -50,6 +78,7 @@ function App() {
     setShowProjects(false);
     setShowBlog(false);
     setSelectedPostId(null);
+    setShowAbout(null);
   }
 
   useEffect(() => {
@@ -69,6 +98,7 @@ function App() {
         toggleProjects={toggleProjects}
         toggleShowBlog={toggleShowBlog}
         toggleShowHome={toggleShowHome}
+        toggleShowAbout={toggleAbout}
         ref={headerRef} // Correctly assigning ref to Header
       />
       {showHome && <WelcomeSection />}{" "}
@@ -76,13 +106,25 @@ function App() {
       {showProjects && <Projects data={dataprojects} />}{" "}
       {/* Conditionally render Projects */}
       {showBlog && (
-        <Blog
-          blogposts={blogposts}
-          selectedPostId={selectedPostId}
-          setSelectedPostId={setSelectedPostId}
-          toggleShowBlog={toggleShowBlog}
-        />
+        <>
+          <Blog
+            blogposts={currentPost}
+            selectedPostId={selectedPostId}
+            setSelectedPostId={setSelectedPostId}
+            toggleShowBlog={toggleShowBlog}
+            postPerPage={postPerPage}
+            paginate={paginate}
+            filteredPosts={filteredPosts}
+          />
+          <Pagination
+            paginate={paginate}
+            filteredPosts={filteredPosts.length}
+            postPerPage={postPerPage}
+          ></Pagination>
+        </>
       )}
+      {/* Conditionally render About*/}
+      {showAbout && <AboutMe></AboutMe>}
       <GoTopButton
         scrollToHeader={scrollToHeader} // Pass the scroll function to GoTopButton
         showGoTop={showGoTop} // Only pass showGoTop
@@ -91,7 +133,5 @@ function App() {
     </div>
   );
 }
-
-function AboutMe() {}
 
 export default App;

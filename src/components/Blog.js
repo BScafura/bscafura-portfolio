@@ -1,9 +1,14 @@
 import { BlogItem } from "./BlogItem";
+import { useEffect } from "react";
+import { Pagination } from "./Pagination";
 export function Blog({
   blogposts,
   selectedPostId,
   setSelectedPostId,
   toggleShowBlog,
+  postPerPage,
+  paginate,
+  filteredPosts,
 }) {
   // Function to handle post click
   function handlePostClick(id) {
@@ -12,6 +17,16 @@ export function Blog({
 
   // If a post is selected, filter the post by its id
   const filteredPost = blogposts.find((post) => post.id === selectedPostId);
+
+  // Scroll to top when a blog post is selected
+  useEffect(() => {
+    if (selectedPostId) {
+      window.scrollTo({
+        top: 0, // Scroll to the top of the page
+        behavior: "instant", // instant scrolling effect
+      });
+    }
+  }, [selectedPostId]); // Only run when selectedPostId changes
 
   return (
     <>

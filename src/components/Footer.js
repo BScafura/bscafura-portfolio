@@ -1,7 +1,7 @@
 import {
   faGithub,
   faLinkedinIn,
-  faTwitter,
+  faXTwitter,
   faOrcid,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -17,16 +17,16 @@ export function Footer() {
       </div>
       <div className="links-container">
         <div className="social-media-wrapper">
-          <a href="">
+          <a href="https://github.com/BScafura" target="_blank">
             <FontAwesomeIcon className="header-icon" icon={faGithub} />
           </a>
-          <a href="">
+          <a href="https://www.linkedin.com/in/brenoscafura/" target="_blank">
             <FontAwesomeIcon className="header-icon" icon={faLinkedinIn} />
           </a>
-          <a href="">
-            <FontAwesomeIcon className="header-icon" icon={faTwitter} />
+          <a href="" target="_blank">
+            <FontAwesomeIcon className="header-icon" icon={faXTwitter} />
           </a>
-          <a href="https://orcid.org/0000-0003-0240-6939">
+          <a href="https://orcid.org/0000-0003-0240-6939" target="_blank">
             <FontAwesomeIcon className="header-icon" icon={faOrcid} />
           </a>
         </div>

@@ -1,7 +1,10 @@
 import React, { forwardRef } from "react";
 
 const Header = forwardRef(
-  ({ toggleProjects, toggleShowBlog, toggleShowHome }, ref) => {
+  (
+    { toggleProjects, toggleShowBlog, toggleShowHome, toggleShowAbout },
+    ref
+  ) => {
     return (
       <header ref={ref} className="header">
         <p>B</p>
@@ -11,7 +14,7 @@ const Header = forwardRef(
               <button onClick={toggleShowHome}>Home</button>
             </li>
             <li>
-              <button>About</button>
+              <button onClick={toggleShowAbout}>About</button>
             </li>
             <li>
               <button onClick={toggleProjects}>Portfolio</button>
@@ -22,7 +25,10 @@ const Header = forwardRef(
           </div>
         </div>
         <div className="button-wrapper">
-          <a className="contact-button" href="/">
+          <a
+            className="contact-button"
+            href=" mailto:enzoscafura@gmail.com?subject=Hey%20Breno! "
+          >
             <button className="bn632-hover bn22">Contact</button>
           </a>
         </div>

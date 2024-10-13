@@ -5,7 +5,7 @@ import {
   faXTwitter,
   faOrcid,
 } from "@fortawesome/free-brands-svg-icons";
-import { faRobot } from "@fortawesome/free-solid-svg-icons";
+import { faComputer } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export function WelcomeSection() {
@@ -58,16 +58,19 @@ export function WelcomeSection() {
           </div>
           <div className="info-links">
             <div className="info-links-social-media-wrapper">
-              <a href="">
+              <a href="https://github.com/BScafura" target="_blank">
                 <FontAwesomeIcon className="header-icon" icon={faGithub} />
               </a>
-              <a href="">
+              <a
+                href="https://www.linkedin.com/in/brenoscafura/"
+                target="_blank"
+              >
                 <FontAwesomeIcon className="header-icon" icon={faLinkedinIn} />
               </a>
               <a href="">
                 <FontAwesomeIcon className="header-icon" icon={faXTwitter} />
               </a>
-              <a href="https://orcid.org/0000-0003-0240-6939">
+              <a href="https://orcid.org/0000-0003-0240-6939" target="_blank">
                 <FontAwesomeIcon className="header-icon" icon={faOrcid} />
               </a>
             </div>
@@ -77,7 +80,8 @@ export function WelcomeSection() {
         <div className="info-container ">
           <div className="tools-container">
             <h3 style={{ textAlign: "center" }}>
-              Skills <FontAwesomeIcon className="header-icon" icon={faRobot} />
+              Skills{" "}
+              <FontAwesomeIcon className="header-icon" icon={faComputer} />
             </h3>
             <div className="tech-wrapper">
               <div className="tech-container">
