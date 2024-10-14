@@ -17,7 +17,10 @@ export function Pagination({ postPerPage, filteredPosts, paginate }) {
               style={{ color: "black" }}
               href="!#"
               className="page-link"
-              onClick={() => paginate(number)}
+              onClick={(e) => {
+                e.preventDefault(); // Prevents the default link behavior
+                paginate(number); // Calls the pagination function
+              }}
             >
               {number}
             </a>
