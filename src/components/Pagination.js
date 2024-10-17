@@ -12,9 +12,13 @@ export function Pagination({ postPerPage, filteredPosts, paginate }) {
         style={{ justifyContent: "center", marginTop: 20 }}
       >
         {pageNumbers.map((number) => (
-          <li key={number} className={"page-item"}>
+          <li key={number} className="page-item bn632-hover bn222">
             <a
-              style={{ color: "black" }}
+              style={{
+                color: "black",
+                background: "transparent",
+                border: "none",
+              }}
               href="!#"
               className="page-link"
               onClick={(e) => {

@@ -165,6 +165,22 @@ code {
   font-size: 18px;
 }
 
+.bn632-hover.bn222 {
+  background-image: linear-gradient(
+    to right,
+    #0ba360,
+    #3cba92,
+    #30dd8a,
+    #2bb673
+  );
+  box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+  margin-right: 10px;
+  margin-left: 0;
+  border-radius: 5px;
+  width: 35px;
+  height: 35px;
+}
+
 .navigation-links {
   display: flex;
   gap: 20px;
