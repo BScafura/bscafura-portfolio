@@ -46,6 +46,22 @@ const dataprojects = [
     link: "https://github.com/BScafura/wba-builders-ticketstock",
     status: "ongoing",
   },
+  {
+    id: 4,
+    name: "Split-Mate",
+    description:
+      "Split-Mate is a user-friendly bill-splitting application designed to help people manage shared expenses with friends, family, or roommates. The app simplifies tracking how much each person owes or is owed, making it easy to settle debts with transparency. Users can add expenses, allocate amounts to specific people, and keep a running tally of outstanding balances. Whether it’s splitting restaurant bills, rent, or shared travel costs, Split-Mate ensures fairness and accuracy, offering a seamless experience for managing group expenses.",
+    features: [
+      "Add and split expenses between friends",
+      "Track individual balances and amounts owed",
+      "Intuitive interface for hassle-free financial management",
+      "Responsive design for mobile and desktop users",
+    ],
+    image: "🧑‍🤝‍👩🏻💰",
+    techs: ["Javascript", "React", "CSS3"],
+    link: "https://github.com/BScafura/split-mate",
+    status: "finished",
+  },
 ];
 
 export default dataprojects;
