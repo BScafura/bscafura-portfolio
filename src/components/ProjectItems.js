@@ -57,6 +57,9 @@ export function ProjectItems({ dataproject }) {
             <a class="bn31" target="_blank" href={dataproject.link}>
               <span class="bn31span">Visit</span>
             </a>
+            <a class="bn31" target="_blank" href={dataproject.repository}>
+              <span class="bn31span">Repository</span>
+            </a>
           </div>
           {showFeatures === true ? (
             <p>
